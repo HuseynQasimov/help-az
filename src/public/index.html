@@ -1,0 +1,23 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    
+    function fn(){
+        axios.post("http://127.0.0.1:5000/api/nurse", {
+            "full_name": "Evez Eliyev",
+            "mobile_number": "994557945552",
+            "email": "greatcharlie717@mail.ru",
+            "password": "12345678",
+            "address": "nesimi rayonu",
+            "experience": "1 il 6 ay",
+            "social_media": ["https://facebook.com"],
+            "photo": "myphoto"
+        }).then(res=>{
+            console.log('res=',res)
+        }).catch(err=>{
+            console.log('err=',err)
+})
+}
+</script>
+
+<button onclick="fn()">send</button>
